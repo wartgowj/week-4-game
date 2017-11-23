@@ -47,14 +47,14 @@ $(document).ready(function() {
 		wins++;
 		$('.wins').text('Wins: ' + wins);
 		reset();
-		alert("YOU WIN!!")
+		$("#win-sound")[0].play();
 	}
 
 	function lose(){
 		losses++;
 		$('.losses').text('Losses: ' + losses);
 		reset();
-		alert("SORRY, YOU LOST");
+		$("#lose-sound")[0].play();
 	}
 
 	$('.redGem').on('click', function(){
